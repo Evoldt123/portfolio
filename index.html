@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <title>Danny's Site</title>
+    <script src="./main.js"></script>
   </head>
 
   <body>
@@ -13,8 +15,13 @@
     <p>Ooooooh look a <a href="physics/physics_index.html">physics</a> link</p>
 
     <img src=images/frog.jpg>
-
-    <p id="thing"></p>
+    <form>
+      <input type="number" name="test-inputs" id="first-text"><br>
+      <input type="number" name="test-inputs" id="second-text"><br>
+      <input type="submit" onclick="iHavePolio(event)">
+      <p id="thing"></p>
+    </form>
+    
   </body>
 
 </html>
