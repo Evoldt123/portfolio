@@ -4,10 +4,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="stylesheet.css">
     <title>Danny's Site</title>
+
     <script src="./main.js"></script>
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
   </head>
 
-  <body>
+  <body onload="onPageLoad()">
     <h1>Hello World</h1>
     <h2>Awoooooooga</h2>
     <h3>Testing from Desktop</h3>
@@ -15,13 +20,18 @@
     <p>Ooooooh look a <a href="physics/physics_index.html">physics</a> link</p>
 
     <img src=images/frog.jpg>
-    <form>
-      <input type="number" name="test-inputs" id="first-text"><br>
-      <input type="number" name="test-inputs" id="second-text"><br>
-      <input type="submit" onclick="iHavePolio(event)">
-      <p id="thing"></p>
-    </form>
     
+    <p>Here is an inline equation: \(E=mc^2\)</p>
+    <p>And here is a displayed equation:</p>
+    \[
+    \int_{a}^{b} f(x) \, dx
+    \]
+
+    <p>\(1+1=2\)</p>
+
+    <footer>
+      <p>Site by Danny Tran</p>
+    </footer>
   </body>
 
 </html>
