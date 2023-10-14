@@ -16,13 +16,23 @@ var question_one_ans = question_one_A + question_one_B;
 function onPageLoad() {
     var equation_q1_a = `\\(${question_one_A}+${question_one_B}\\)`;
     document.getElementById("question_one").innerHTML = `What is ${equation_q1_a} ?`
+    document.getElementById("spoiler1").innerHTML = `${equation_q1_a} is ${question_one_A+question_one_B}`;
+}
+
+function spoilerToggle(spoilerID) {
+    if (document.getElementById(spoilerID).style.display === 'none') {
+        document.getElementById(spoilerID).style.display = '';
+    }
+    else {
+        document.getElementById(spoilerID).style.display = 'none';
+    }
 }
 
 function iHavePolio(event) {
     event.preventDefault();
 
     var num1 = parseInt(document.getElementById("first-text").value);
-
+    
     if (num1 === question_one_ans) {
         document.getElementById("thing").innerHTML = "Correct";
     }
@@ -30,6 +40,8 @@ function iHavePolio(event) {
         document.getElementById("thing").innerHTML = "Incorrect";
     }
     
-        
+    if (document.getElementById("spoiler_button_1").style.display = 'none') {
+        document.getElementById("spoiler_button_1").style.display = '';
+    }
 }
 
