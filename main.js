@@ -1,7 +1,21 @@
 // Utilities
+
+var cacheBustParameter = 'v=1.' + new Date().getTime();
+
+var script = document.createElement('script');
+script.src = 'script.js?' + cacheBustParameter;
+document.head.appendChild(script);
+
+var link = document.createElement('link');
+link.rel = 'stylesheet';
+link.href = 'styles.css?' + cacheBustParameter;
+document.head.appendChild(link);
+
 function rndInteger(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+
 
 // Load Funcitonality
 
