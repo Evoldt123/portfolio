@@ -18,6 +18,7 @@ function onPageLoad() {
     var equation_q1_a = `\\(${question_one_A}+${question_one_B}\\)`;
     document.getElementById("question_one").innerHTML = `What is ${equation_q1_a} ?`
     document.getElementById("spoiler1").innerHTML = `${equation_q1_a} is ${question_one_A+question_one_B}`;
+    MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 }
 
 function spoilerToggle(spoilerID) {
