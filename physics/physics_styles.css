@@ -25,6 +25,12 @@ body {
     padding: 10px;
 }
 
+.question_text {
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .number_input, .text_input {
     margin-left: 5px;
     margin-right: 5px;
