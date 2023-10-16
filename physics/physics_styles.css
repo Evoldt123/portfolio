@@ -15,6 +15,16 @@ body {
     background-color: floralwhite;
 }
 
+.question_wrapper {
+    border: 3px dotted lightgray;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
 .number_input, .text_input {
     margin-left: 5px;
     margin-right: 5px;
@@ -33,7 +43,7 @@ body {
 }
 
 .correct_incorrect {
-    width: 5%;
+    width: 10%;
     display: inline-block;
     margin-left: auto;
     margin-right: auto;
@@ -45,6 +55,7 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 10px;
 }
 
 .spoiler_box {
@@ -60,7 +71,6 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 5px;
-    background-color: springgreen;
 }
 
 footer {
