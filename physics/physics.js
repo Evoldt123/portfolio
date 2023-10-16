@@ -15,9 +15,9 @@ var question_one_ans = question_one_A + question_one_B;
 // Events
 
 function onPageLoad() {
-    var equation_q1_a = `\\(${question_one_A}+${question_one_B}\\)`;
+    var equation_q1_a = `\\(${question_one_A} \\, \\mathrm{m/s} +${question_one_B} \\, \\mathrm{m/s} \\)`;
     document.getElementById("question_one").innerHTML = `What is ${equation_q1_a} ?`
-    document.getElementById("spoiler1").innerHTML = `${equation_q1_a} is ${question_one_A+question_one_B}`;
+    document.getElementById("spoiler1").innerHTML = `${equation_q1_a} is \\(${question_one_A+question_one_B} \\, \\mathrm{m/s} \\)`;
     MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
 }
 
@@ -30,19 +30,21 @@ function spoilerToggle(spoilerID) {
     }
 }
 
-function answerSubmit(event) {
+function singleQuestionAnswerSubmit(event, input_box, answer, correct_display, spoiler) {
     event.preventDefault();
 
-    var num1 = parseInt(document.getElementById("first-text").value);
+    var inputAns = parseInt(document.getElementById(input_box).value);
     
-    if (num1 === question_one_ans) {
-        document.getElementById("thing").innerHTML = "Correct";
+    if (inputAns === answer) {
+        document.getElementById(correct_display).innerHTML = "Correct";
+        document.getElementById(correct_display).style.backgroundColor = "springgreen";
     }
     else {
-        document.getElementById("thing").innerHTML = "Incorrect";
+        document.getElementById(correct_display).innerHTML = "Incorrect";
+        document.getElementById(correct_display).style.backgroundColor = "lightcoral";
     }
     
-    if (document.getElementById("spoiler_button_1").style.display = 'none') {
-        document.getElementById("spoiler_button_1").style.display = '';
+    if (document.getElementById(spoiler).style.display = 'none') {
+        document.getElementById(spoiler).style.display = '';
     }
 }

@@ -15,6 +15,38 @@ body {
     background-color: floralwhite;
 }
 
+.number_input, .text_input {
+    margin-left: 5px;
+    margin-right: 5px;
+    height: 20px;
+    padding: 5px 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.number_input {
+    width: 20%;
+}
+
+.text_input {
+    width: 5%;
+}
+
+.correct_incorrect {
+    width: 5%;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.submit_button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .spoiler_box {
     margin-left: 30%;
     margin-right: 30%;
@@ -27,6 +59,8 @@ body {
     display: block;
     margin-left: auto;
     margin-right: auto;
+    padding: 5px;
+    background-color: springgreen;
 }
 
 footer {

@@ -19,17 +19,16 @@
             <p>Link to <a href="physics_index.html">main menu</a>.</p>
             <img src=../images/frog.jpg>
 
-            <form onsubmit="answerSubmit(event)">
+            <form onsubmit="singleQuestionAnswerSubmit(event, 'question1_text1', question_one_ans, 'correct_question1', 'spoiler_button_1')">
+                <p id="question_one">Should be here</p>
+                <input required type="number" class="number_input" id="question1_text1" placeholder="Enter your answer..."/>
+                <input type="text" class="text_input" id="question1_text2" placeholder="Units (req.)"/>
 
-            <p id="question_one">Should be here</p>
-            <input type="number" name="test-inputs" id="first-text"><br>
+                <p id="question_two"></p>
+                <input type="submit" class="submit_button" value="Ooga Booga">
 
-            <p id="question_two"></p>
-            <input type="submit" value="Ooga Booga">
-
-            <p id="thing"></p>
+                <p id="correct_question1" class="correct_incorrect"></p>
             </form>
-
 
             <button class="spoiler_button" id="spoiler_button_1" style="display:none" type="button" onclick="spoilerToggle('spoiler1')">See Why</button>
             <p class="spoiler_box" id="spoiler1" style="display:none">
