@@ -76,24 +76,58 @@ Then plug values in to get:
 \\( \\\\ \\)
 (Note that \\( \\theta = 90 - ${u2_q2_theta} \\) since the angle made between the downwards force and the applied force down the hill dont make up the given angle on its own.)`;
 
+// u2_q3
+var u2_question_three_ans = -1; 
+while (u2_question_three_ans <= 10 || u2_question_three_ans >= 100) {
+    var u2_q3_a = parseFloat(rndFloat(1, 4, 3));
+    var u2_q3_b = parseFloat(rndFloat(0, 0, 2));
+    var u2_q3_exp = parseFloat(rndFloat(0.01, 0.30, 2));
+    var u2_q3_displacement = parseFloat(rndFloat(10, 30, 2));
+
+    u2_q3_exp *= -1;
+    u2_q3_b *= -1;
+    u2_q3_exp = parseFloat(u2_q3_exp.toPrecision(2));
+    u2_q3_b = parseFloat(u2_q3_b.toPrecision(2));
+
+    var u2_question_three_ans_big = u2_q3_a/(u2_q3_exp+1) * Math.pow(u2_q3_displacement, u2_q3_exp+1) + u2_q3_b*u2_q3_displacement;
+    var u2_question_three_ans = parseFloat(u2_question_three_ans_big.toPrecision(2));
+}
+
+
+if (u2_q3_exp == 0) {u2_q3_exp = 0.20;}
+while (u2_q3_exp >= 1) {
+    u2_q3_exp -= 0.1;
+}
+
+var u2_q3_text = `The function of a car's brakes can be expressed by the funtion: 
+\\( \\\\ \\)
+\\( F(d) = ${u2_q3_a}d ^{${u2_q3_exp}} - ${u2_q3_b*-1} \\)
+\\( \\\\ \\)
+What is the total work put in if the brakes are applied for \\( ${u2_q3_displacement} \\, \\mathrm{m} \\)?`;
+
+
+
+var u2_q3_spoiler_content = `The answer is \\( ${u2_question_three_ans_big} \\, \\mathrm{J} \\) or \\( ${u2_question_three_ans} \\, \\mathrm{J} \\) 
+`;
+
 // Events
 
 function onPageLoad() {
     var equation_q1_a = `\\(${question_one_A} \\, \\mathrm{m/s} +${question_one_B} \\, \\mathrm{m/s} \\)`;
     document.getElementById("question_one").innerHTML = `What is ${equation_q1_a} ?`;
-    document.getElementById("spoiler1").innerHTML = `
-    ${equation_q1_a} is \\(${question_one_A+question_one_B} \\, \\mathrm{m/s} \\)`;
+    document.getElementById("spoiler1").innerHTML = `${equation_q1_a} is \\(${question_one_A+question_one_B} \\, \\mathrm{m/s} \\)`;
 
 
     document.getElementById("u1_question_two").innerHTML = u1_q2_text;
 
-
     document.getElementById("u2_question_one").innerHTML = u2_q1_text;
     document.getElementById("u2_spoiler1").innerHTML = u2_q1_spoiler_content;
     
-
     document.getElementById("u2_question_two").innerHTML = u2_q2_text;
     document.getElementById("u2_spoiler2").innerHTML = u2_q2_spoiler_content;
+
+    document.getElementById("u2_question_three").innerHTML = u2_q3_text;
+    document.getElementById("u2_spoiler3").innerHTML = u2_q3_spoiler_content;
 
 
 
