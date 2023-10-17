@@ -85,6 +85,9 @@ while (u2_question_three_ans <= 10 || u2_question_three_ans >= 100) {
     var u2_q3_displacement = parseFloat(rndFloat(10, 30, 2));
 
     if (u2_q3_exp == 0) {u2_q3_exp = 0.20;}
+    while (u2_q3_exp <= 0.1) {
+        u2_q3_exp += 0.1;
+    }
     while (u2_q3_exp >= 1) {
         u2_q3_exp -= 0.1;
     }
