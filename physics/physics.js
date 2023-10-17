@@ -108,7 +108,27 @@ What is the total work put in if the brakes are applied for \\( ${u2_q3_displace
 
 
 var u2_q3_spoiler_content = `The answer is \\( ${u2_question_three_ans_big} \\, \\mathrm{J} \\) or \\( ${u2_question_three_ans} \\, \\mathrm{J} \\) 
-`;
+\\( \\\\ \\\\ \\) 
+This question is good practice for integration
+\\( \\\\ \\)
+If we imagine that the function is graphed, in order to find work we would need to find the area under the curve since we are working with a function of Force and displacement
+\\( \\\\ \\)
+We need to find the integral between 0 and ${u2_q3_displacement}
+\\( W = \\int_0^{${u2_q3_displacement}} F(d)dd \\)
+\\( \\\\ \\)
+Reminder that to integrate, where:
+\\( f(x) = ax^n \\)
+\\( \\\\ \\)
+\\( \\int f(x)dx = \\frac{ax^{n+1}}{n+1} + C\\)
+\\( \\\\ \\)
+or for this example, we'll reformat this to be
+\\( \\int f(x)dx = \\frac{a}{n+1}x^{n+1} + C\\)
+\\( \\\\ \\)
+We integrate by subtracting both limits:
+\\( \\\\ \\)
+\\( \\int_0^{${u2_q3_displacement}} F(d)dd = [ \\frac{ ${u2_q3_a} }{ ${u2_q3_exp}+1 }d^{${u2_q3_exp}+1} + \\frac{ ${u2_q3_b} }{0+1}d^{0+1} + C]_0^{${u2_q3_displacement}} \\)
+\\( \\\\ \\)
+When calculating for the starting distance when \\( d = 0 \\), we find that `;
 
 // Events
 
