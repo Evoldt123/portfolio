@@ -84,36 +84,35 @@ while (u2_question_three_ans <= 10 || u2_question_three_ans >= 100) {
     var u2_q3_exp = parseFloat(rndFloat(0.01, 0.30, 2));
     var u2_q3_displacement = parseFloat(rndFloat(10, 30, 2));
 
+    if (u2_q3_exp == 0) {u2_q3_exp = 0.20;}
+    while (u2_q3_exp >= 1) {
+        u2_q3_exp -= 0.1;
+    }
+
+    
+
     u2_q3_exp *= -1;
     u2_q3_b *= -1;
     u2_q3_exp = parseFloat(u2_q3_exp.toPrecision(2));
     u2_q3_b = parseFloat(u2_q3_b.toPrecision(2));
-
+    var u2_q3_temp_frac = u2_q3_a/(u2_q3_exp+1)
     var u2_question_three_ans_big = u2_q3_a/(u2_q3_exp+1) * Math.pow(u2_q3_displacement, u2_q3_exp+1) + u2_q3_b*u2_q3_displacement;
     var u2_question_three_ans = parseFloat(u2_question_three_ans_big.toPrecision(2));
 }
 
-
-if (u2_q3_exp == 0) {u2_q3_exp = 0.20;}
-while (u2_q3_exp >= 1) {
-    u2_q3_exp -= 0.1;
-}
-
-var u2_q3_text = `The function of a car's brakes can be expressed by the funtion: 
+var u2_q3_text = `The function of a car's brakes can be expressed by the function: 
 \\( \\\\ \\)
 \\( F(d) = ${u2_q3_a}d ^{${u2_q3_exp}} - ${u2_q3_b*-1} \\)
 \\( \\\\ \\)
 What is the total work put in if the brakes are applied for \\( ${u2_q3_displacement} \\, \\mathrm{m} \\)?`;
 
-
-
 var u2_q3_spoiler_content = `The answer is \\( ${u2_question_three_ans_big} \\, \\mathrm{J} \\) or \\( ${u2_question_three_ans} \\, \\mathrm{J} \\) 
 \\( \\\\ \\\\ \\) 
 This question is good practice for integration
 \\( \\\\ \\)
-If we imagine that the function is graphed, in order to find work we would need to find the area under the curve since we are working with a function of Force and displacement
+If we imagine that the function is graphed, in order to find work we would need to find the area under the curve since we are working with a function of force and displacement
 \\( \\\\ \\)
-We need to find the integral between 0 and ${u2_q3_displacement}
+We need to find the integral between 0 and ${u2_q3_displacement}, or: 
 \\( W = \\int_0^{${u2_q3_displacement}} F(d)dd \\)
 \\( \\\\ \\)
 Reminder that to integrate, where:
@@ -122,13 +121,22 @@ Reminder that to integrate, where:
 \\( \\int f(x)dx = \\frac{ax^{n+1}}{n+1} + C\\)
 \\( \\\\ \\)
 or for this example, we'll reformat this to be
+\\( \\\\ \\)
 \\( \\int f(x)dx = \\frac{a}{n+1}x^{n+1} + C\\)
 \\( \\\\ \\)
 We integrate by subtracting both limits:
 \\( \\\\ \\)
 \\( \\int_0^{${u2_q3_displacement}} F(d)dd = [ \\frac{ ${u2_q3_a} }{ ${u2_q3_exp}+1 }d^{${u2_q3_exp}+1} + \\frac{ ${u2_q3_b} }{0+1}d^{0+1} + C]_0^{${u2_q3_displacement}} \\)
 \\( \\\\ \\)
-When calculating for the starting distance when \\( d = 0 \\), we find that `;
+\\( \\int_0^{${u2_q3_displacement}} F(d)dd = [ ${u2_q3_temp_frac.toPrecision(8)}d^{${(u2_q3_exp+1).toFixed(2)}} ${u2_q3_b}d + C ]_0^{${u2_q3_displacement}} \\)
+\\( \\\\ \\)
+\\( \\int_0^{${u2_q3_displacement}} F(d)dd = [ ${u2_q3_temp_frac.toPrecision(8)}(${u2_q3_displacement})^{${(u2_q3_exp+1).toFixed(2)}} ${u2_q3_b}(${u2_q3_displacement}) + C ] -  
+[ ${u2_q3_temp_frac.toPrecision(8)}(0)^{${(u2_q3_exp+1).toFixed(2)}} ${u2_q3_b}(0) + C ] \\)
+\\( \\\\ \\)
+\\( \\int_0^{${u2_q3_displacement}} F(d)dd = ${u2_q3_temp_frac.toPrecision(8)}(${u2_q3_displacement})^{${(u2_q3_exp+1).toFixed(2)}} ${u2_q3_b}(${u2_q3_displacement}) \\)
+\\( \\\\ \\)
+\\( W = ${u2_question_three_ans_big} \\, \\mathrm{J} \\)
+`;
 
 // Events
 
