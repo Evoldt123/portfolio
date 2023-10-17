@@ -17,6 +17,27 @@
         <div class="content">
             <p>Link to <a href="physics_index.html">main menu</a>.</p>
             <h1><u>Sample Questions</u></h1>
+
+            <!-- 
+            <div class="question_wrapper">
+                <h3><strong>############</strong></h3>
+                <img src=../images/############.jpg>
+
+                <form onsubmit="singleQuestionAnswerSubmit('############', '############', [############, '#'], '############', '############', event)">
+                    <p class="question_text" id="############">Should be here</p>
+                    <input required type="number" class="number_input" id="############" placeholder="Enter your answer..."/>
+                    <input type="text" class="text_input" id="############" placeholder="Units"/>
+                    
+                    <input type="submit" class="submit_button" value="Submit"/>
+
+                    <p id="############" class="correct_incorrect"></p>
+
+                    <button class="spoiler_button" id="############" style="display:none" type="button" onclick="spoilerToggle('############')">See Why</button>
+                    <p class="spoiler_box" id="############" style="display:none">SPOILER TEXT HERE</p>
+                </form>
+            </div>
+            -->
+
             <h2><u>Nonsense Section</u></h2>
 
             <div class="question_wrapper">
@@ -26,7 +47,7 @@
 
                 <form onsubmit="singleQuestionAnswerSubmit('question1_text1', 'question1_text2', [question_one_ans, 'm/s'], 'correct_question1', 'spoiler_button_1', event)">
                     <p class="question_text" id="question_one">Should be here</p>
-                    <input required type="number" class="number_input" id="question1_text1" placeholder="Enter your answer..."/>
+                    <input required type="number" step="0.001" class="number_input" id="question1_text1" placeholder="Enter your answer..."/>
                     <input type="text" class="text_input" id="question1_text2" placeholder="Units"/>
 
                     <input type="submit" class="submit_button" value="Submit"/>
@@ -59,8 +80,10 @@
                 </form>
             </div>
 
+            <h2><u>Unit 2: Calculus</u></h2>
+
             <div class="question_wrapper">
-                <h3><strong>Projectile Motion: Basketball</strong></h3>
+                <h3><strong>Calculus: Introduction to Work</strong></h3>
                 <img src=../images/frog.jpg>
 
                 <form onsubmit="singleQuestionAnswerSubmit('u2_question1_text1', 'u2_question1_text2', [u2_question_one_ans, 'J'], 'u2_correct_question1', 'u2_spoiler_button_1', event)">
@@ -74,6 +97,24 @@
 
                     <button class="spoiler_button" id="u2_spoiler_button_1" style="display:none" type="button" onclick="spoilerToggle('u2_spoiler1')">See Why</button>
                     <p class="spoiler_box" id="u2_spoiler1" style="display:none">SPOILER TEXT HERE</p>
+                </form>
+            </div>
+
+            <div class="question_wrapper">
+                <h3><strong>Calculus: Continuation of Work</strong></h3>
+                <img src=../images/skier.jpg>
+
+                <form onsubmit="singleQuestionAnswerSubmit('u2_question2_text1', 'u2_question2_text2', [u2_question_two_ans, 'J'], 'u2_correct_question2', 'u2_spoiler_button_2', event)">
+                    <p class="question_text" id="u2_question_two">Should be here</p>
+                    <input required type="number" class="number_input" id="u2_question2_text1" placeholder="Enter your answer..."/>
+                    <input type="text" class="text_input" id="u2_question2_text2" placeholder="Units"/>
+                    
+                    <input type="submit" class="submit_button" value="Submit"/>
+
+                    <p id="u2_correct_question2" class="correct_incorrect"></p>
+
+                    <button class="spoiler_button" id="u2_spoiler_button_2" style="display:none" type="button" onclick="spoilerToggle('u2_spoiler2')">See Why</button>
+                    <p class="spoiler_box" id="u2_spoiler2" style="display:none">SPOILER TEXT HERE</p>
                 </form>
             </div>
 
