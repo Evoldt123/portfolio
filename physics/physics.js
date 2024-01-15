@@ -198,3 +198,10 @@ function singleQuestionAnswerSubmit(input_box, unit_box, answers, correct_displa
         document.getElementById(spoiler).style.display = '';
     }
 }
+
+function openNav() {
+    document.getElementById("formula_sidebar").style.width = "100%";
+}
+function closeNav() {
+    document.getElementById("formula_sidebar").style.width = "0%";
+}

@@ -31,6 +31,8 @@ body {
     width: 0px;
     overflow-x: hidden;
     z-index: 100;
+
+    opacity: 100%;
 }
 
 .sidebar_button {
