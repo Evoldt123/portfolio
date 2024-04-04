@@ -18,7 +18,7 @@ var question_one_ans = question_one_A + question_one_B;
 
 
 // u1_q2
-var u1_q2_text = "I'm working on more recent units, the answer here is \\( 5 \\mathrm{m/s} \\)";
+var u1_q2_text = "The answer here is \\( 5 \\mathrm{m/s} \\)";
 var u1_question_two_ans = 5;
 
 // u2_q1
