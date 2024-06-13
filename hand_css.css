@@ -1,0 +1,59 @@
+html {
+    background-color: #3C0008;
+    margin: 0; 
+}
+
+body {
+    margin: 0;
+    text-align: center;
+}
+
+.content {
+    margin: 3%;
+    padding: 10px;
+    border: 5px solid darkgrey;
+    color: dimgray;
+    background-color: black;
+}
+
+#body_text {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: bold;
+    font-size: 30px;
+    width: 60%;
+    color: gray;
+    text-align: center;
+    margin: auto;
+    margin-top: 30px;
+}
+
+footer { 
+    display: inline-block;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: dimgray;
+    color: black;
+    position: relative;
+}
+
+h1 {
+    font-size: 80px;
+}
+
+#quote {
+    font-size: 30px;
+    color: goldenrod;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+
+img {
+    width: 30%;
+}
+
+
+
+
+
