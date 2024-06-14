@@ -49,9 +49,38 @@ h1 {
     font-style: italic;
 }
 
+#tolls {
+    font-size: 50px;
+    color: maroon;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: bold;
+}
+
 img {
     width: 30%;
 }
+
+.container {
+    display: flex;
+    justify-content: center;
+    background-color: lightcoral;
+    border: red;  
+}
+
+.box {
+    width: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #000;
+    color:black;
+    font-size: 35px;
+
+    display: flex; /* Make each box a flex container */
+    align-items: center; /* Center the content vertically */
+    justify-content: center; /* Center the content horizontally */
+    text-align: center; /* Center the text */
+}
+
 
 
 
